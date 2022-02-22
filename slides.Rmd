@@ -265,6 +265,17 @@ Stock assessments provide best estimates of the state of fisheries providing ~ 5
 ---
 
 
+# How do we assess the "unassessed"?
+
+We don't have good *abundance* data for most of the world's fisheries. 
+
+We do have data on *catches*
+
+.center[![:scale 80%](`r file.path(img_path,"fao.png")`)]
+
+---
+
+
 
 
 # Improving Estimates of Global Fishery Status
@@ -281,7 +292,6 @@ Stock assessments provide best estimates of the state of fisheries providing ~ 5
   
 - Nearly all are versions "catch-only" data-limited assessments
 
-.center[**How well do they work, and can we make them better?**]
 ].pull-right[
 
 Collage of "status of global unassessed" papers
@@ -293,38 +303,7 @@ Collage of "status of global unassessed" papers
 
 
 
-# How do we assess the "unassessed"?
 
-We don't have good *abundance* data for most of the world's fisheries. 
-
-We do have data on *catches*
-
-.center[![:scale 80%](`r file.path(img_path,"fao.png")`)]
-
----
-
-
-# Anatomy of a Catch-Only Model
-
-.pull-left[
-
-Given a catch history and a population model...
-
-1. Construct **prior distributions** of parameters
-  - growth rate, carrying capacity, initial and final stock status
-  
-2. Sample parameters from prior distributions and apply to catch history + model
-
-3. **reject** combinations of parameters that crash the population or **don't conform to status priors**
-
-
-].pull-right[
-
-
-
-]
-
----
 
 # How well do catch-only models work?
 
@@ -518,17 +497,14 @@ class: center, middle, inverse
 
 Ecosystem-based management increasingly asked to meet needs of environment and society. 
 
-
 There is a growing push to protect 30% of land and water in the coming decade.
-
-One strategy for providing "whole ecosystem" protection: reserves
-
 
 Social-ecological systems are highly complex though
   - Spatial-temporal dynamics
   - Species interactions
   - Human behavior
   
+Makes *predicting* and *assessing* the performance of protected areas harder than you might think. 
 
 ---
 
@@ -537,27 +513,6 @@ Social-ecological systems are highly complex though
 .pull-left[
 
 - Early protected areas focused on providing refuge from the outside world
-
-- Modern protected areas increasingly intended to benefit **outside**
-
-- Particularly in the marine realm
-  - Commonly called **marine protected areas**
-  - Highly mobile species
-  - Importance of wild fisheries
-
-].pull-right[
-
-
-
-]
-
----
-
-# Population-Level Effects of Protected Areas
-
-.pull-left[
-
-- Protected area research historically focused on **inside** vs. **outside**
 
 - Protection has wider impacts though
   - "spillover" of adult or larval organisms
@@ -570,9 +525,11 @@ Social-ecological systems are highly complex though
 ].pull-right[
 
 
+
 ]
 
 ---
+
 
 # MPAs - The Evidence
 
@@ -648,28 +605,6 @@ Relatively sedentary adults, widely dispersed larvae with post-settlement densit
 
 ---
 
-# Inside vs. Outside = Effect?
-
-.center[When MPA doesn't affect outside, *response ratio* is a good indicator]
---
-
-.center[![:scale 80%](`r file.path(img_path, "rr1.jpg")`)]
-
-
-
-
----
-
-# Inside vs. Outside = Effect?
-
-.center[When MPAs affect the outside, *response ratio* is a poor indicator]
-
-
---
-
-.center[![:scale 80%](https://raw.githubusercontent.com/DanOvando/weird-fishes/master/static/blog/2021-07-06-pop-effects-of-mpas_files/biased_dr_plot.jpg)]
-
----
 
 
 # Case Study: Channel Islands MPAs
@@ -1007,4 +942,47 @@ For those not impressed by simulations, here are some real world data
 
 ---
 
+# Inside vs. Outside = Effect?
+
+.center[When MPA doesn't affect outside, *response ratio* is a good indicator]
+--
+
+.center[![:scale 80%](`r file.path(img_path, "rr1.jpg")`)]
+
+
+
+
+---
+
+# Inside vs. Outside = Effect?
+
+.center[When MPAs affect the outside, *response ratio* is a poor indicator]
+
+
+--
+
+.center[![:scale 80%](https://raw.githubusercontent.com/DanOvando/weird-fishes/master/static/blog/2021-07-06-pop-effects-of-mpas_files/biased_dr_plot.jpg)]
+
+---
+# Anatomy of a Catch-Only Model
+
+.pull-left[
+
+Given a catch history and a population model...
+
+1. Construct **prior distributions** of parameters
+  - growth rate, carrying capacity, initial and final stock status
+  
+2. Sample parameters from prior distributions and apply to catch history + model
+
+3. **reject** combinations of parameters that crash the population or **don't conform to status priors**
+
+
+].pull-right[
+
+
+
+]
+
+---
 
