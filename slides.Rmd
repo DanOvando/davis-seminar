@@ -7,7 +7,7 @@ output:
   xaringan::moon_reader:
     lib_dir: libs
     seal: true
-    self_contained: false
+    self_contained: true
     css: [default-fonts,default, my-theme.css]
     nature:
       highlightStyle: github
@@ -978,86 +978,5 @@ For those not impressed by simulations, here are some real world data
 
 ---
 
-# constance notes
-
-summarize the problem with catch only quicker
-
-what's the key thing from each slide
-
-more people - impacts of not having assessments
-
-remind people that it's the same area
-
-was the blue line the result of the calculation 
-
-# Tim Notes
-
-figure out what you're trying to sell yourself as a bit more explicitly 
-
-I'm a person that does blank - they're going to have 4 great talks
-  - want people to get excited about specific things
-  
-Finding that sliver of positivitiy 
-
-now what - where does the field go, where is my role in that
-
-Can make the "tale of two fisheries" infinitely more simply. "important and hard"
-
-Lead up to the big slide - get rid of B/BMSY
-
-quick and then let the talk explain the optimistic skeptic. OK, so what does my optimistic skepticism 
-
-Spending a bit of time for the terrestrial folks about why (stock assessment) is challenging 
-
-prior and posterior explanations - set up expectation, and then the result
-
-- dig into the abundance estimates 
-
-Competing with slides too much - when do you want attention on you and when you want it on - reserves in the marine protected areas 
-
-great for the department because of blank
-
-Kareiva around them lies "the qusetion" try to figure out the big question about you. Tim, are you too siilar to so and so. Am I going to be field work enough, where's your big three 
-
-Take bathroom breaks, no space in between 
-
-take the time for the grad students - you try and learn about them
-
-intrepid
-
-someday I hope to find a nice and clear thing, but the hard ones are important 
 
 
-
----
-
-# Job Talk Demo Tape
-
-- Testing out rough content and timing
-  - Are these the topics worth covering?
-  - Degree of breadth vs. depth 
-
-- Will make pretty later. 
-
-- 45 min talk
-  - 5 min intro
-  - 25 min past
-  - 15 min future
-
-- Clarifying questions OK, save bigger questions for end 
-*por favor*
-
----
-
-
-# The Position
-
-[Assistant Professor of Quantitative Fisheries Ecology](https://recruit.ucdavis.edu/JPF04378)
-
-[Department of Wildlife, Fish, and Conservation Biology, University of California, Davis](https://wfcb.ucdavis.edu/people/faculty)
-
-Quantative but very terrestrial (Marmots!)
-
-This position is part of the UC Davis “Sustainable Marine Resources Initiative (SMRI): The Future of Food from the Sea,” coordinated by the cross-campus Coastal and Marine Sciences Institute (http://cmsi.ucdavis.edu).
-
----
