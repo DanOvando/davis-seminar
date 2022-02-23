@@ -114,17 +114,11 @@ Bayesian methods...
 class: center, middle, inverse
 # 
 
-## Assessing Data-Limited Fisheries
+## 1. Assessing Data-Limited Fisheries
 
-Evaluating and improving on catch-only models 
+## 2. Effects of Protected Areas
 
-## Policy Evaluation
-
-Population effects of marine reserves
-
-## Vision at UC Davis
-
-Where I hope to go
+## 3. Vision at UC Davis
 
 ---
 
@@ -223,20 +217,16 @@ To answer this, we use a class of models broadly called *stock assessments*
 # Stock Assessments
 
 .pull-left[
-Ideally, stock assessments fit a *population dynamics* model
+Ideally, stock assessments fit a **population dynamics** model
     
   - Births
   - Deaths
   - Growth
 
 
-using  *fishery dependent* and *independent* data
+using  fishery **dependent** and **independent** data
 
-  - Catches and catch per unit effort
-  - Size & age structure
-  - Research surveys
-  
-These models estimate *stock status* relative to *reference points*
+These models estimate **stock status** relative to **reference points**
   - Unfished biomass
   - Biomass that would maximize long-term catch
   - Sustainability of fishing effort
@@ -252,7 +242,7 @@ These models estimate *stock status* relative to *reference points*
 
 Stock assessments provide best estimates of the state of fisheries providing ~ 50% of the world's catch. 
 
-.center[*What about the other half?*]
+.center[**What about the other half?**]
 
 --
 
@@ -267,9 +257,9 @@ Stock assessments provide best estimates of the state of fisheries providing ~ 5
 
 # How do we assess the "unassessed"?
 
-We don't have good *abundance* data for most of the world's fisheries. 
+We don't have good **abundance** data for most of the world's fisheries. 
 
-We do have data on *catches*
+We do have data on **catches**
 
 .center[![:scale 80%](`r file.path(img_path,"fao.png")`)]
 
@@ -278,45 +268,23 @@ We do have data on *catches*
 
 
 
-# Improving Estimates of Global Fishery Status
-
-.center[Why?]
-
---
-
-.pull-left[
-- *Nature* abhors a vacuum of global maps
-
-- Many efforts to assess the status of global fisheries 
-  - Support UN SDGs
-  
-- Nearly all are versions "catch-only" data-limited assessments
-
-].pull-right[
-
-Collage of "status of global unassessed" papers
-
-]
-
-
----
-
-
-
-
-
-# How well do catch-only models work?
-
-And can we make them better?
+# Can Catches Inform Global Assessments?
 
 .pull-left[
 
 - Catch-only models increasingly being used to assess and manage fisheries
 
-- Many models, but share common feature of **inferring** or **predicting** stock status based on attributes of **catch history**
+- Many types, but share common feature of **inferring** or **predicting** stock status based on attributes of **catch history**
 
-- Vigorous debate around performance
+- Vigorous debate as to their performance. 
 
+1. How well do catch-only models work?
+  
+  - Spoiler: Not very well.
+
+2. Can we make them better?
+  
+  - Spoiler:  Not without investment in new data
 
 ].pull-right[
 
@@ -326,31 +294,28 @@ And can we make them better?
 ]
 ---
 
-# Improving Estimates of Global Fisheries
-.pull-left[
 
-Two general research areas
 
-1. How well do catch-only models work?
+# Can Catches Inform Global Assessments?
+
+
+### 1. How well do catch-only models work?
   
   - Spoiler: Not very well.
 
-2. What might improve them?
+### 2. Can we make them better?
   
-  - Spoiler:  Augmentation with targeted data
+  - Spoiler:  Not without investment in new data
 
-].pull-right[
-
-
-]
 
 ---
 
 
 # [`sraplus`](https://danovando.github.io/sraplus/)
 
-Pella-Tomlinson surplus production model with process error
+Core tool of our research: `sraplus`
 
+Pella-Tomlinson surplus production model with process error
 
 
 $$B_{t + 1} = \left(B_{t} + B_{t}\frac{r}{m - 1}\left(1 - \left(\frac{B_t}{K}\right)^{m- 1}\right) - c_t\right)p_t$$
@@ -399,19 +364,18 @@ A good model should be able to **learn** something about stock status when confr
 # Moving Beyond Catch-Only
 
 - We can't **infer** stock status based on catch alone
-  - We can predict some, that's a discussion for later
+  - We can predict some...
 
-- But, there's a lot of data between "catch-only" and "full integrated stock assessment"
+- There's a lot of data between "catch-only" and "full integrated stock assessment"
   - Effort reconstructions
   - Strength of fisheries management
   - Intensity of trawling
   
-  
-- Using `sraplus`, we tested the ability of different combinatinos of other **broadly available** data to say something useful about the status of fisheries
+  Using `sraplus`, we tested the ability of different combinations of **broadly available** data to say something useful about the status of fisheries
 
 ---
 
-# Swept Area Ratio
+# Example: Swept Area Ratio
 
 Logic is simple: places trawled more often might have higher fishing mortality rates
 
@@ -431,7 +395,7 @@ The **posterior prediction** from SAR regression becomes **prior** for `sraplus`
 ---
 
 
-# Additioal Data Helps
+# Additioal Data Helps Individual Fisheries
 
 <small> CMSY is popular catch-only method</small>
 
@@ -442,13 +406,24 @@ The **posterior prediction** from SAR regression becomes **prior** for `sraplus`
 ---
 
 
-# Better than nothing...
+# Little Improvement from Regional Application
 
-But far from good. 
+- On average, catch-only 25% better than a random guess
+  - But, wrong status category 57% of the time...
 
---
+- Augmenting with additional data helps some
+  - Modest reductions in MAPE and bias
+  - Better at fishing mortality rates
 
-.center[![:scale 80%](https://raw.githubusercontent.com/DanOvando/weird-fishes/master/static/blog/2021-07-20-assessing-global-fisheries_files/figure_3.jpg)]
+- But estimates have substantial **error** and **bias**
+  - Out hope might be uncertain but unbiased
+
+---
+
+# Error-Prone and Biased Results
+
+
+.center[![:scale 100%](imgs/error-and-bias.png)]
 
 
 ---
@@ -465,39 +440,40 @@ If catches alone aren't informative, what should we add on?
 ---
 
 
-# Assessment - Take Home
+# Assessing Data-Limited Fisheries
+
 
 .pull-left[
-- Can't let the perfect be the enemy of the good when it comes to assessment
 
-- But, important to know how imperfect we're talking about
+- Can't let the perfect be the enemy of the good
 
-- Moving beyond catch-only to take advantage of a richer palette of data
+- Important to know how imperfect
+  
+  - Catches don't really update priors
+  
+-  Even with new data, high levels of error and bias
+
+.center[**Understanding of global fisheries depends on better data, not better models**]
+
 ].pull-right[
 
-
+.center[![:scale 80%](imgs/IMG_3612.JPG)]
 
 ]
 ---
 
 
 class: center, middle, inverse
-# Policy Evaluation
-
----
-
-# Evaluating Protected Areas
-
-
+## Effects of Protected Areas
 
 ---
 
 
-# Evaluating Protected Areas
+# Protected Areas
 
 Ecosystem-based management increasingly asked to meet needs of environment and society. 
-
-There is a growing push to protect 30% of land and water in the coming decade.
+  - Protect 30% of land and water in the coming decade.
+  - Up from single digits in global seas now
 
 Social-ecological systems are highly complex though
   - Spatial-temporal dynamics
@@ -506,6 +482,8 @@ Social-ecological systems are highly complex though
   
 Makes *predicting* and *assessing* the performance of protected areas harder than you might think. 
 
+???
+[Currently 26% MPA in US waters, 3% no-take MPAs](https://marineprotectedareas.noaa.gov/gallery/understanding-area-based-mgmt-in-us-waters.html)
 ---
 
 # Leaving the Walled Garden
@@ -524,7 +502,7 @@ Makes *predicting* and *assessing* the performance of protected areas harder tha
 
 ].pull-right[
 
-
+.center[![:scale 75%](imgs/IMG_1679.JPG)]
 
 ]
 
@@ -681,13 +659,28 @@ $$\mathbf{B^s} \sim N(\beta_r,\sigma_r)$$
 ---
 
 
-# MPAs - Take Home
+## Effects of Protected Areas
 
-- MPAs have a critical role to play in ecosystem-based management
+.pull-left[
 
-- But, as we increasingly turn to MPAs for management, need to assess their actual performance
+- Protected areas can support ecosystem-based management on land and sea
 
-- Population-level effects likely smaller and harder to detect than we might think
+- Particularly in oceans, critical to consider effects **inside** and **outside**
+
+-  **Population** effects may be smaller and harder to find than conventionally thought
+
+- Does not mean there are not benefits
+  - But may impede adaptive management
+  
+- Communities should have a clear understanding of expected effects of protected areas
+
+
+].pull-right[
+
+.center[![:scale 80%](imgs/IMG_2947.JPG)]
+
+]
+
 
 ---
 
@@ -857,6 +850,35 @@ class: center, middle, inverse
 # Extras
 
 ---
+
+# Improving Estimates of Global Fishery Status
+
+.center[Why?]
+
+--
+
+.pull-left[
+- *Nature* abhors a vacuum of global maps
+
+- Many efforts to assess the status of global fisheries 
+  - Support UN SDGs
+  
+- Nearly all are versions "catch-only" data-limited assessments
+
+].pull-right[
+
+Collage of "status of global unassessed" papers
+
+]
+
+
+---
+
+
+
+
+
+
 
 # Catch = Fish?
 
