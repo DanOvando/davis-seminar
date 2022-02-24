@@ -54,58 +54,30 @@ Using ...
   - Open and reproducible data science
   - Collaboration
 
+--
+.center[**An Optimistic Skeptic**]
 
 
 ---
 
-# An Optimistic Skeptic
-
-
-
-### The skeptic... 
-
-Someday I hope for a clear answer...
-
---
-
-  - But it hasn't happened yet. 
-  
-  - Complex systems often resist simple solutions
-
---
-
-### The optimism...
-
-- There are lessons in null-results
-
-- Science can help us navigate uncertainty and complexity
-
-- Slow progress towards better understanding and better outcomes
-
-
-???
-
-What do I mean by an optimistic skeptic? Social-ecological systems are complicated. This both complicates our ability to clearly understand what is happening in them, and to identify simple solutions to complex problems. Hence, "skeptic": my prior is that uncertainty and complexity are the norm. Optimist though: I believe that science can help us navigate this uncertainty and complexity in a productive way, to help us move slowly towards better understanding and better outcomes. 
-
-
----
 
 # Why Bayes?
 
 ![](https://imgs.xkcd.com/comics/bridge.png)
 
 
+Bayesian methods... 
 
 --
 
 
-Bayesian methods... 
-  - Allow us estimate **probabilities** around parameters and policy effects
+- Provide **posterior probability distributions** for parameters, informed by **priors** 
   
-  - Give us a framework for incorporating **prior knowledge**
+  - "What was the probability that the protected area increased biomass by more than 10%"
   
-  - Lend themselves to the **complex structure** of social-ecological systems
-
+- Give us a framework for incorporating **prior knowledge**
+  
+- Suited to **complex structures**
 
 ---
 
@@ -129,6 +101,8 @@ class: center, middle, inverse
 
 # Fisheries Science
 
+.center[**Understanding and managing fisheries systems**]
+
 .pull-left[
 Assessment science largely focused on two key questions
 
@@ -136,12 +110,14 @@ Assessment science largely focused on two key questions
 
 ].pull-right[
 
-![](`r file.path(img_path,"IMG_1664.JPG")`)
+![:scale 75%](`r file.path(img_path,"IMG_1664.JPG")`)
 
 ]
 ---
 
 # Fisheries Science
+
+.center[**Understanding and managing fisheries systems**]
 
 .pull-left[
 Assessment science largely focused on two key questions
@@ -150,7 +126,7 @@ Assessment science largely focused on two key questions
 
 ].pull-right[
 
-![](`r file.path(img_path,"IMG_1664.JPG")`)
+![:scale 75%](`r file.path(img_path,"IMG_1664.JPG")`)
 
 
 ]
@@ -158,6 +134,8 @@ Assessment science largely focused on two key questions
 ---
 
 # Fisheries Science
+
+.center[**Understanding and managing fisheries systems**]
 
 .pull-left[
 Assessment science largely focused on two key questions
@@ -168,14 +146,14 @@ Assessment science largely focused on two key questions
 
 ].pull-right[
 
-![](`r file.path(img_path,"IMG_1664.JPG")`)
+![:scale 75%](`r file.path(img_path,"IMG_1664.JPG")`)
 
 ]
 
 ---
 
 
-# How many fish are there?
+# How Many Fish Are There?
 
 > Counting fish is just like counting trees, except they move and are invisible
 > `r tufte::quote_footer('---  John Shepherd (loosely)')`
@@ -194,29 +172,9 @@ Two general options
 
 ---
 
-# How many fish can we catch?
-
-Suppose we conduct a survey and find that there are 100,000 fish in the population...
-
---
-  
-  - Does this represent a large fraction of a small but unfished population?
-  
-  - A small fraction of a historically massive population?
-  
---
-
-Which is right has major implications for management. 
-
-To answer this, we use a class of models broadly called *stock assessments*
-
-
----
-
-
 # Stock Assessments
 
-.pull-left[
+
 Ideally, stock assessments fit a **population dynamics** model
     
   - Births
@@ -231,25 +189,20 @@ These models estimate **stock status** relative to **reference points**
   - Biomass that would maximize long-term catch
   - Sustainability of fishing effort
 
-].pull-right[
-
-]
-
-
 ---
 
 # A Tale of Two Fisheries
 
 Stock assessments provide best estimates of the state of fisheries providing ~ 50% of the world's catch. 
 
-.center[**What about the other half?**]
+.center[**What about the other "data-limited" half?**]
 
 --
 
 .center[![:scale 80%](`r file.path(img_path,"two-fisheries.png")`)]
 
 
-.right[Hilborn et al. (2020)]
+.right[[Hilborn *et al.* (2020)](https://www.pnas.org/content/117/4/2218)]
 
 
 ---
@@ -296,19 +249,31 @@ We do have data on **catches**
 
 
 
-# Can Catches Inform Global Assessments?
+# Assessing Data-Limited Fisheries
+.pull-left[
 
+Our Questions: 
 
-### 1. How well do catch-only models work?
+1. How well do catch-only models work?
   
   - Spoiler: Not very well.
 
-### 2. Can we make them better?
+2. Can we make them better?
   
   - Spoiler:  Not without investment in new data
 
+].pull-right[
 
+.center[![:scale 100%](`r file.path(img_path,"two-fisheries.png")`)]
+
+
+.right[[Hilborn *et al.* (2020)](https://www.pnas.org/content/117/4/2218)]
+
+
+
+]
 ---
+
 
 
 # [`sraplus`](https://danovando.github.io/sraplus/)
@@ -353,12 +318,13 @@ A good model should be able to **learn** something about stock status when confr
 ---
 
 
-#  Catches don't tell us about status
+#  Catches Don't Tell Us Status
 --
 
 .center[![:scale 75%](`r file.path(img_path,"nothing_learned_plot.png")`)]
 
 
+.right[[Ovando *et al.* (2021)](https://onlinelibrary.wiley.com/doi/abs/10.1111/faf.12637)]
 ---
 
 # Moving Beyond Catch-Only
@@ -377,36 +343,40 @@ A good model should be able to **learn** something about stock status when confr
 
 # Example: Swept Area Ratio
 
-Logic is simple: places trawled more often might have higher fishing mortality rates
+Logic is simple: places trawled more often might have higher fishing mortality 
 
 .center[![:scale 50%](`r file.path(img_path,"sar.png")`)]
 
-
+.right[[Amoroso *et al* (2018)](http://www.pnas.org/content/early/2018/10/03/1802379115)]
 ---
 
 # Translating Swept Area Ratio
 
 The **posterior prediction** from SAR regression becomes **prior** for `sraplus`
 
-.center[![:scale 75%](`r file.path(img_path,"sar_plot.png")`)]
+.center[![:scale 70%](`r file.path(img_path,"sar_plot.png")`)]
 
 
 
 ---
 
 
-# Additioal Data Helps Individual Fisheries
+# Additional Data Helps Individual Fisheries
+
+--
+.center[![:scale 70%](`r file.path(img_path,"ex_scatter.png")`)]
+
+.right[[Ovando *et al.* (2021)](https://onlinelibrary.wiley.com/doi/abs/10.1111/faf.12593)]
+
+???
 
 <small> CMSY is popular catch-only method</small>
 
 <small> SAR & FMI augments catches with local data on trawl fishing and strength of management </small>
-
-.center[![:scale 75%](`r file.path(img_path,"ex_scatter.png")`)]
-
 ---
 
 
-# Little Improvement from Regional Application
+# Little Improvement from <br> Regional Application
 
 - On average, catch-only 25% better than a random guess
   - But, wrong status category 57% of the time...
@@ -423,20 +393,23 @@ The **posterior prediction** from SAR regression becomes **prior** for `sraplus`
 # Error-Prone and Biased Results
 
 
-.center[![:scale 100%](imgs/error-and-bias.png)]
+.center[![:scale 90%](imgs/error-and-bias.png)]
 
+
+???
+.right[[Ovando *et al.* (2021)](https://onlinelibrary.wiley.com/doi/abs/10.1111/faf.12593)]
 
 ---
 
-# How Can we Improve?
+# How Can We Improve?
 
 If catches alone aren't informative, what should we add on?
 
 --
 
-.center[![:scale 80%](`r file.path(img_path,"voi.jpg")`)]
+.center[![:scale 70%](`r file.path(img_path,"voi.jpg")`)]
 
-
+.right[[Ovando *et al.* (2021)](https://onlinelibrary.wiley.com/doi/abs/10.1111/faf.12593)]
 ---
 
 
@@ -472,10 +445,12 @@ class: center, middle, inverse
 # Protected Areas
 
 Ecosystem-based management increasingly asked to meet needs of environment and society. 
+
+Protected areas a big part of this
   - Protect 30% of land and water in the coming decade.
   - Up from single digits in global seas now
 
-Social-ecological systems are highly complex though
+Social-ecological systems are highly complex
   - Spatial-temporal dynamics
   - Species interactions
   - Human behavior
@@ -492,7 +467,7 @@ Makes *predicting* and *assessing* the performance of protected areas harder tha
 
 - Early protected areas focused on providing refuge from the outside world
 
-- Protection has wider impacts though
+- Protection has wider impacts
   - "spillover" of adult or larval organisms
   - Displacement of human activities 
 
@@ -546,6 +521,7 @@ Makes *predicting* and *assessing* the performance of protected areas harder tha
 
 .center[![:scale 100%](`r file.path(img_path,"lester.jpg")`)]
 
+.right[[Lester *et al.* (2009)](https://www.int-res.com/abstracts/meps/v384/p33-46)]
 
 ]
 
@@ -553,12 +529,12 @@ Makes *predicting* and *assessing* the performance of protected areas harder tha
 ---
 
 
-# Population Effects of MPAs
+# Population-Level Effects of MPAs
 
-<!-- .center[![:scale 85%](`r file.path(img_path,"bio_anim.gif")`)] -->
+.center[![:scale 70%](`r file.path(img_path,"bio_anim.gif")`)]
 
 
-```{r, out.width="100%", fig.align="center"}
+```{r, out.width="100%", fig.align="center", eval = FALSE}
 knitr::include_graphics(file.path(img_path,"bio_anim.gif"))
 ```
 
@@ -567,13 +543,13 @@ Relatively sedentary adults, widely dispersed larvae with post-settlement densit
 
 ---
 
-# Population Effects of MPAs
+# Population-Level Effects of MPAs
 
 
-<!-- .center[![:scale 85%](`r file.path(img_path,"fleet_anim.gif")`)] -->
+.center[![:scale 70%](`r file.path(img_path,"fleet_anim.gif")`)]
 
 
-```{r, out.width="100%", fig.align="center"}
+```{r, out.width="100%", fig.align="center", eval=FALSE}
 knitr::include_graphics(file.path(img_path,"fleet_anim.gif"))
 ```
 
@@ -605,7 +581,6 @@ Trend for species targeted by fishing... Looks promising!
 But wait... 
 
 .center[![:scale 80%](`r file.path(img_path,"raw_trend.png")`)]
-
 
 ---
 
@@ -654,7 +629,9 @@ $$\mathbf{B^s} \sim N(\beta_r,\sigma_r)$$
 
 # Population-Level Effects of MPAs
 
-.center[![](`r file.path(img_path,"did.jpg")`)]
+.center[![:scale 80%](`r file.path(img_path,"did.jpg")`)]
+
+.right[[Ovando *et al.* (2021)](https://conbio.onlinelibrary.wiley.com/doi/abs/10.1111/cobi.13782)]
 
 ---
 
@@ -697,12 +674,12 @@ class: center, middle, inverse
 
 ---
 
-# Fishery Impacts of MPAs
+# Fishery Impacts of Protected Areas
 
 .pull-left[
 - Part of ecosystem based management is understanding impacts of policies on **people**
 
-- The bigger the MPA...
+- The bigger the protected area...
   - The more likely substantial conservation success
   - The less likely benefits to fisheries
 
@@ -710,7 +687,7 @@ class: center, middle, inverse
 
 - Goal at UC Davis: Empirical research on the fishery impacts of MPAs
   - Focus on California
-  - CCRFP
+  - Applications globally
 
 ]
 .pull-right[
@@ -721,7 +698,7 @@ class: center, middle, inverse
 
 ---
 
-# Fishery Impacts of MPAs
+# Fishery Impacts of  Protected Areas
 
 
 .center[![:scale 100%](https://danovando.github.io/dissertation/thesis_files/figure-html/catch-effects-1.png)]
@@ -737,14 +714,14 @@ class: center, middle, inverse
 .pull-left[
 
 - Fisheries management has had many successes
-  - Achieving single-species management goals
 
 - Bycatch remains a problem even in otherwise well-managed fisheries
   - Sharks, turtles, marine mammals
 
-- Statics spatial protections may struggle in a changing climate
+- Static spatial protections may struggle in a changing climate
 
 - Goal at UC Davis: Theory and evidence for reducing bycatch of threatened species
+  - Simulating Social-Ecological Systems with  [`marlin`](https://danovando.github.io/marlin/)
 
 ].pull-right[
 
@@ -755,18 +732,9 @@ class: center, middle, inverse
 
 ---
 
-# Simulating Social-Ecological Systems with  [`marlin`](https://danovando.github.io/marlin/)
-
-.center[![:scale 80%](https://danovando.github.io/marlin/reference/figures/README-unnamed-chunk-10-1.png)]
-
-
----
-
-
 # Forecasting Social-Ecological Systems
 
 
-.pull-left[
 
 - Quantitative ecology often focuses on explaining what we **observe**
   - Good identification but low $R^2$
@@ -777,14 +745,14 @@ class: center, middle, inverse
 
 - Goal at UC Davis: Collaborative research forecasting social-ecological systems
 
-
-]
 ---
 
 # Forecasting Social-Ecological Systems
 
-.center[![:scale 80%](`r file.path(img_path,"bb.jpg")`)]
+.center[![:scale 70%](`r file.path(img_path,"bb.jpg")`)]
 
+
+.right[[Ovando *et al.* (2022)](https://cdnsciencepub.com/doi/10.1139/cjfas-2021-0287)]
 
 ---
 
@@ -801,7 +769,7 @@ class: center, middle, inverse
   - Improves science
 
 
-.center[**Excited to collaboratively solve terrestrial and aquatic environmental problems as part of UC Davis**]
+.center[**Excited to help solve terrestrial and aquatic environmental problems as part of UC Davis community**]
 
 
 ].pull-right[
@@ -833,7 +801,7 @@ website: [danovando.com](https://www.weirdfishes.blog/)
 
 ].pull-right[
 
-.center[![](`r file.path(img_path,"squats.jpg") `)]
+.center[![:scale 80%](`r file.path(img_path,"squats.jpg") `)]
 
 
 ]
@@ -851,6 +819,60 @@ class: center, middle, inverse
 
 ---
 
+
+
+# An Optimistic Skeptic
+
+### The skeptic... 
+
+Someday I hope for a clear answer...
+
+--
+
+  - But it hasn't happened yet. 
+  
+**Uncertainty and complexity are the norm**
+
+--
+
+### The optimism...
+
+- There are lessons in null-results
+
+- Slow progress towards better understanding and better outcomes
+
+**Science can help us navigate uncertainty and complexity**
+
+
+???
+
+What do I mean by an optimistic skeptic? Social-ecological systems are complicated. This both complicates our ability to clearly understand what is happening in them, and to identify simple solutions to complex problems. Hence, "skeptic": my prior is that uncertainty and complexity are the norm. Optimist though: I believe that science can help us navigate this uncertainty and complexity in a productive way, to help us move slowly towards better understanding and better outcomes. 
+
+
+---
+
+# How many fish can we catch?
+
+Suppose we conduct a survey and find that there are 100,000 fish in the population...
+
+--
+  
+  - Does this represent a large fraction of a small but unfished population?
+  
+  - A small fraction of a historically massive population?
+  
+--
+
+Which is right has major implications for management. 
+
+To answer this, we use a class of models broadly called *stock assessments*
+
+
+---
+
+
+
+
 # Improving Estimates of Global Fishery Status
 
 .center[Why?]
@@ -861,7 +883,7 @@ class: center, middle, inverse
 - *Nature* abhors a vacuum of global maps
 
 - Many efforts to assess the status of global fisheries 
-  - Support UN SDGs
+  - UN Sustainable Development Goals
   
 - Nearly all are versions "catch-only" data-limited assessments
 
@@ -1007,4 +1029,13 @@ Given a catch history and a population model...
 ]
 
 ---
+
+# Simulating Social-Ecological Systems with  [`marlin`](https://danovando.github.io/marlin/)
+
+.center[![:scale 80%](https://danovando.github.io/marlin/reference/figures/README-unnamed-chunk-10-1.png)]
+
+
+---
+
+
 
